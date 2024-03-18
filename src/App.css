@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.back {
+  background: url("https://s3-alpha-sig.figma.com/img/417a/e1d0/c11496f4ea2ea385049953d114f20c47?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BPxW4GdcxDzsZmvT4OD2ZHXptz4Sbj7TnSt6WzKBK4DqBIe8Nq4ZKDVIBqrWYwM4BiCDieOFY2XA1A3X24k54q6wQvABGpeNPzWh8ElEnzGMU4eY~juB1NRSKmLi~2NBzEpo1iPbAH2ofv9yQaY1iRG-zWAkNWFkNsRyLTdl5CjWhHanhy5BYiaCkHT3WcL~rJ24~D1TmurjHsETVUt1-QV45ALEKqLeUSvYm3irzSPfNlSOOAbIGxQQ3JPw2E1vcUJLkuVD6mr8dA-u7ZjCskSzOAdmMe8q5YfkoOjHv3CLHIzZOVOTHJBDJobXvAJ2oc52OCwOpSC8~iy3Yst5-A__");
+  background-position: initial;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.overlay {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Change the color and opacity as needed */
+}
+::-webkit-scrollbar {
+  width: 8px; /* Width of the entire scrollbar */
+  height: 6px;
+  background-color: transparent; /* Remove default background color */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white; /* Light gray color of the scrollbar handle */
+  border-radius: 4px; /* Radius of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0; /* Lighter gray color of the scrollbar handle on hover */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; /* Remove default background color of the scrollbar track */
+}
