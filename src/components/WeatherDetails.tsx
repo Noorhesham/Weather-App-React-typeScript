@@ -1,11 +1,10 @@
 import { useDegree } from "../context/DegreeContext";
-import { useGetWeather } from "../weather/useGetWeather";
-import Loader from "./Loader";
+import { WeatherProps } from "../types";
 
-const WeatherDetails = () => {
-  const { weather, isLoading } = useGetWeather();
+const WeatherDetails = ({weather}:{weather:WeatherProps}) => {
+
   const { degree } = useDegree();
-  if (isLoading) return <Loader />;
+
   console.log(weather);
   const todayCurrent = degree === "c" ? weather.current.temp_c : `${weather.current.temp_f}`;
   const todayHigh =
@@ -13,7 +12,7 @@ const WeatherDetails = () => {
   const todayLow =
     degree === "c" ? weather.forecast.forecastday[0].day.mintemp_c : `${weather.forecast.forecastday[0].day.mintemp_f}`;
   return (
-    <main className="flex justify-between text-white">
+    <main className="flex flex-wrap justify-between text-white">
       <h1 className=" flex flex-col items-start gap-[10px] text-6xl font-bold leading-[75.07px]">
         New Cairo
         <span className=" text-[20px] leading-[23.46px]">

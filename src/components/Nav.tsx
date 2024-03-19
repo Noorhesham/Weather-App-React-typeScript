@@ -3,7 +3,7 @@ import WeatherButtons from "./WeatherButtons";
 
 const Nav = () => {
   return (
-    <header className="flex justify-between  ">
+    <header className="flex flex-wrap sm:gap-5 justify-between  ">
       <Logo />
       <WeatherButtons />
     </header>

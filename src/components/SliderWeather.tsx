@@ -1,14 +1,11 @@
 import { useState } from "react";
-import { dayProp, hourProp } from "../types";
-import { useGetWeather } from "../weather/useGetWeather";
+import { WeatherProps, dayProp, hourProp } from "../types";
 import DayWeatherCard from "./DayWeatherCard";
-import Loader from "./Loader";
 import WeatherCard from "./WeatherCard";
 
-const SliderWeather = () => {
+const SliderWeather = ({weather}:{weather:WeatherProps}) => {
   const [slider, setSlider] = useState("hour");
-  const { weather, isLoading } = useGetWeather();
-  if (isLoading) return <Loader />;
+
   const daily = weather.forecast.forecastday[0].hour;
   return (
     <section>
